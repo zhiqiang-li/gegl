@@ -20,8 +20,8 @@
 #include "config.h"
 
 #include <glib-object.h>
-
 #define GEGL_ITERATOR2_API
+
 #include "gegl.h"
 #include "gegl-operation-point-render.h"
 #include "gegl-operation-context.h"
@@ -101,7 +101,7 @@ gegl_operation_point_render_process (GeglOperation       *operation,
   if ((result->width > 0) && (result->height > 0))
     {
       GeglBufferIterator *i = gegl_buffer_iterator_new (output, result, level, out_format,
-                                                        GEGL_ACCESS_WRITE, GEGL_ABYSS_NONE, 2);
+                                                        GEGL_ACCESS_WRITE, GEGL_ABYSS_NONE, 1);
 
       while (gegl_buffer_iterator_next (i))
           point_render_class->process (operation, i->items[0].data, i->length, &i->items[0].roi, level);

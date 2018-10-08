@@ -61,6 +61,8 @@ liboperation_sources = \
 	gegl-operation-temporal.c		\
 	gegl-operation-context.c		\
 	gegl-operation-context-private.h \
+	gegl-operation-pipeline.c        \
+	gegl-operation-pipeline.h        \
 	gegl-operations.c			\
 	gegl-operations.h
 
